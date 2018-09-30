@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Madlibs!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <h1>Madlibs!</h1>
+    <div>
+        <input type="text" id="noun-box" placeholder="Type a Noun here" title="Type a Noun here">
+        <input type="text" id="verb-box" placeholder="Type a Verb here" title="Type a Verb here">
+        <input type="text" id="adjective-box" placeholder="Type a Adjective here" title="Type a Adjective here">
+        <input type="text" id="adverb-box" placeholder="Type a Adverb here" title="Type a Adverb here">
+        <button id="submit" value="Submit" title="Submit">Submit</button>
+    </div>
+    <script>
+    document.getElementById("submit").addEventListener("click", function(){
+       
+    let queryString = "madlibs-output.html?noun=" + document.getElementById("noun-box").value;
+    queryString = queryString + "&verb=" +document.getElementById("verb-box").value;
+    queryString = queryString + "&adjective=" +document.getElementById("adjective-box").value;
+    queryString = queryString + "&adverb=" +document.getElementById("adverb-box").value;
+    // window.location.(queryString);
+    window.location("madlibs-output.html");
+
+
+
+
+
+    })
+    
+    </script>
+</body>
+</html>
