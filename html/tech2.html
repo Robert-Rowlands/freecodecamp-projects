@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tech1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <style>
+        nav {
+            border: solid black;
+            width: 100%;
+        }
+
+        .nav-link {
+            padding: 5px;
+            margin: 5px;
+
+        }
+
+        .main-section {
+            border: solid blue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        code {
+            font-family: monospace;
+            white-space: pre;
+            background-color: antiquewhite;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        header {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        footer {
+            font-family: 'Oswald', sans-serif;
+            margin-left: 20px;
+        }
+
+        #navbar {
+            height: 100%;
+            border: solid black;
+            background-color: rgb(37, 37, 37);
+            text-align: center;
+            color: white;
+        }
+
+        @media only screen and (min-width: 600px) {
+            #navbar {
+                top: 0;
+                left: 0;
+                position: fixed;
+                height: 100%;
+                width: 200px;
+                background-color: rgb(37, 37, 37);
+                /* z-index: 1; */
+                padding-top: 20px;
+                text-align: center;
+                border: solid black;
+
+            }
+
+            #nav-header {
+                color: white
+            }
+
+            .nav-link {
+                color: white;
+                border: solid black;
+                padding: 10px;
+                display: block;
+                margin: 10px;
+                background-color: darkblue;
+            }
+
+            #main-doc {
+                margin-left: 220px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header id="nav-header">
+            <h1>
+                Parts of an HTML Page
+            </h1>
+        </header>
+        <a href="#what_is_html" class="nav-link">What is Html</a>
+        <a href="#page_declaration_and_head" class="nav-link">Page Declaration and Head</a>
+        <a href="#document_header" class="nav-link">Document Header</a>
+        <a href="#document_body" class="nav-link">Document Body</a>
+        <a href="#document_footer" class="nav-link">Document Footer</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="what_is_html">
+            <header>
+                What is HTML
+            </header>
+            <p>
+                HTML stands for Hyper Text Markup Language.
+                It is a text file that is interpretted by a browser to render web pages and web applications.
+            </p>
+            <p>
+                What are the sections of a basic HTML document?
+            </p>
+            <ul>
+                <li>
+                    Page Declaration
+                </li>
+                <li>
+                    Head
+                </li>
+                <li>
+                    Header
+                </li>
+                <li>
+                    Body
+                </li>
+                <li>
+                    Footer
+                </li>
+            </ul>
+
+
+
+        </section>
+        <section class="main-section" id="page_declaration_and_head">
+            <header>
+                Page Declaration and Head
+            </header>
+            <p>
+                The page declaration lets the browser know what type of document the browser should expect.
+                This is immediately followed by the html tag which will encapsulate the rest of the document.
+                The document declaration has no closing tag.
+                The code below demonstrates the proper use of a declaration tag for html 5 followed by the html tag.
+                Inside the html tag resides the rest of the document's information.
+
+            </p>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+
+                &lt;/html&gt;
+            </code>
+            <p>
+                The head is where the metadata for the document belongs.
+                Things you'll find in the head are the title of the page, links, styles, scripts, and other metadata
+                needed to run the page.
+                The head will not be displayed in the browser.
+                It resides between the opening html tag and the opening body tag in the document.
+                Here is a sample of some of the things you might find in the head.
+            </p>
+            <code>
+                &lt;head&gt;
+                    &lt;meta charset="utf-8" /&gt;
+                    &lt;title&gt;Page Title&lt;/title&gt;
+                    &lt;style&gt;
+                    &lt;/style&gt;
+                &lt;/head&gt;
+            </code>
+        </section>
+        <section class="main-section" id="document_header">
+            <header>
+                Document Header
+            </header>
+            <p>
+                A document header is usually at the top of the page.
+                It is where introductory content and/or links are placed.
+                You can have more than one per document, but there is usually a main one at the top.
+
+            </p>
+            <p>
+                The code below demonstrates a basic header that has no links, just a big title.
+            </p>
+            <code>
+                &lt;header&gt;
+                    &lt;h1&gt;
+                        Hello Everyone!
+                    &lt;/h1&gt;
+                &lt;/header&gt;
+            </code>
+        </section>
+        <section class="main-section" id="document_body">
+            <header>
+                Document Body
+            </header>
+            <p>
+                The body contains the content of the page.
+                It has all the pictures, the words, and the hyperlinks of the document.
+                Everything that is not the page declaration,the html tag, or the head should reside within the body.
+                The body resides within the html tag and below the head tag.
+            </p>
+            <p>
+                Here is an example of the body tag properly placed.
+            </p>
+            <code>
+                &lt;html&gt;
+                    &lt;head&gt;
+
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </section>
+        <section class="main-section" id="document_footer">
+            <header>
+                Document Footer
+            </header>
+            <p>
+                Not every document has a footer, but they can be useful in certain situations.
+                Like headers, you can have more than one footer per page and they can contain links.
+                The purpose of footers is usually to reference information, tell you about who wrote it or who owns it,
+                or just give you a link back to the top so you don't have to scroll.
+                Contact information and site maps are usually located here as well.
+                A footer will go at the bottom of an element and the information is usually specific to that element.
+            </p>
+            <p>In this example, the footer is at the bottom of the body tag, so it would probably contain information
+                about the entirity of the document.
+
+            </p>
+            <code>
+                &lt;html&gt;
+                    &lt;head&gt;
+
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;header&gt;
+
+                        &lt;/header&gt;
+                        &lt;footer&gt;
+                            
+                        &lt;/footer&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </section>
+
+    </main>
+    <footer>
+        © 2018 Robert Rowlands
+    </footer>
+</body>
+
+<!-- 
+X User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content
+(technical documentation).
+
+X User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section.
+There should be a minimum of 5.
+
+X User Story #3: The first element within each .main-section should be a header element which contains text that
+describes the topic of that section.
+
+X User Story #4: Each section element with the class of main-section should also have an id that corresponds with the
+text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains
+the header "Javascript and Java" should have a corresponding id="Javascript_and_Java").
+
+X User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
+
+X User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
+
+X User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+
+X User Story #8: I can see a nav element with a corresponding id="navbar".
+
+X User Story #9: The navbar element should contain one header element which contains text that describes the topic of the
+technical documentation.
+
+X User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be
+one for every element with the class main-section.
+
+X User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
+
+X User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within
+each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the
+text "Hello world").
+
+X User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc
+element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section
+element that has that id and contains the corresponding header.
+
+X User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left
+side of the screen and should always be visible to the user.
+
+User Story #15: My Technical Documentation page should use at least one media query.
+-->
+
+</html>

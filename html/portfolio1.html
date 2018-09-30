@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Bitter|Gilda+Display|Nanum+Myeongjo|Open+Sans+Condensed:300"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        #navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            overflow: hidden;
+            background-color: white;
+            /* user story 11 is above */
+        }
+
+        .nav-link {
+
+
+            background-color: white;
+            color: black;
+            font-size: 18pt;
+            padding: 18px;
+        }
+
+        .nav-link:hover {
+            color: white;
+            background-color: black;
+
+        }
+
+        ul {
+            list-style: none;
+            margin-right: 50px;
+            float: right;
+
+        }
+
+        li {
+            float: left;
+        }
+
+
+        #welcome-section {
+            height: 100vh;
+            padding: 50px;
+            text-align: center;
+            font-size: 3em;
+            margin-top: 3em;
+
+        }
+
+        #projects {
+            font-size: 24pt;
+            padding: 15px;
+        }
+
+        .grid-container {
+            display: grid;
+            font-size: 16pt;
+            grid-column-gap: 100px;
+            grid-row-gap: 25px;
+            grid-column: repeat (auto, 1fr);
+            grid-row: 400px 400px;
+            align-content: center;
+            /* border: solid white; */
+            padding: 15px;
+            background-color: whitesmoke;
+            margin: 50px;
+            border-radius: 5%;
+
+
+        }
+
+        .grid-container img {
+            height: 250px;
+            padding: 5px;
+        }
+
+        .grid-container a {
+            display: block;
+            border: solid lightgray;
+            background-color: lightgray;
+            color: black;
+        }
+
+        .grid-container a:hover {
+            border: solid black;
+            color: white;
+            background-color: darkgray;
+        }
+
+        .grid-container2 {
+            display: grid;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-column: repeat (auto, 1fr);
+            grid-row: 50px, 50px;
+            font-size: 18pt;
+            align-content: center;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .grid-container2 a {
+            background-color: black;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            border: solid black;
+            height: auto;
+            justify-content: center;
+        }
+
+        .grid-container2 a:hover {
+            background-color: white;
+            color: black;
+            border: solid black;
+        }
+
+        #contact-me {
+            text-align: center;
+            padding: 50px;
+            font-size: 24pt;
+        }
+
+        #profile-link {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 10px;
+        }
+
+        #profile-link2 {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 10px;
+        }
+
+
+        #profile-link3 {
+            grid-column-start: 6;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 10px;
+        }
+
+        #profile-link4 {
+            grid-column-start: 8;
+            grid-column-end: 9;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 10px;
+        }
+
+        #tile {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 50px;
+        }
+
+        #tile2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 50px;
+        }
+
+        #tile3 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            padding: 50px;
+        }
+
+        #tile4 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            padding: 50px;
+        }
+
+        .project-tile {
+            text-align: center;
+            box-shadow: 5px 10px #888888;
+            border-radius: 10%;
+        }
+
+
+        #profile-link {}
+
+        h2 {
+            text-align: center;
+        }
+
+        .contact-link {
+            grid-area: il;
+        }
+
+        footer {
+            font-size: 90%;
+            text-align: center;
+            padding: 25px;
+            margin: 25px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #navbar {
+                position: relative;
+                height: 200px;
+                display: block;
+                border: solid black;
+                border-radius: 10%;
+
+            }
+
+            ul {
+                float: left;
+                text-align: center;
+
+            }
+
+            li {
+                float: left;
+                text-align: center;
+                display: block;
+                padding: 12px;
+
+            }
+
+            #welcome-section {
+                padding: 5px;
+                margin-top: 2em;
+            }
+
+            .grid-container {
+                margin: 10px;
+            }
+
+            #tile {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                padding: 10px;
+            }
+
+            #tile2 {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                padding: 10px;
+            }
+
+            #tile3 {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                padding: 10px;
+            }
+
+            #tile4 {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 5;
+                grid-row-end: 6;
+                padding: 10px;
+            }
+
+            #profile-link {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                padding: 10px;
+            }
+
+            #profile-link2 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                padding: 10px;
+            }
+
+            #profile-link3 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 5;
+                grid-row-end: 6;
+                padding: 10px;
+            }
+
+            #profile-link4 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 7;
+                grid-row-end: 8;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <!-- user story 6 is above -->
+            <ul>
+                <li>
+                    <a href="#contact-me" class="nav-link" title="Contact Me">Contact</a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link" title="Projects I Have Made">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#welcome-section" class="nav-link" title="About Me">About Me</a>
+                </li>
+            </ul>
+            <!-- user story 7 is above -->
+        </nav>
+    </header>
+    <section id="welcome-section">
+        <!-- user story 1 is above -->
+        <h1>
+            Robert J. Rowlands <sup>IV</sup>
+        </h1>
+        <!-- user story 2 is above -->
+        <p>
+            web developer
+        </p>
+    </section>
+
+    <section id="projects">
+        <!-- user story 3 is above -->
+        <h2>
+            Projects
+        </h2>
+        <div class="grid-container">
+            <a href="https://codepen.io/robert-rowlands/full/ZMNPXR/" id="tile" class="project-tile" target="_blank">
+                <img src="../images/tdc.jpg" alt="Technical Documentation Page" title="Technical Documentation Page">
+                <div id="project-title">
+                    Technical Documentation Page
+                </div>
+            </a>
+            <a href="https://codepen.io/robert-rowlands/full/RYOLvw/" class="project-tile" id="tile2" target="_blank"><img
+                    src="../images/plp.jpg" alt="Product Landing Page" title="Product Landing Page">
+                <div id="project-title2">
+                    Product Landing Page
+                </div>
+            </a>
+            <a href="https://codepen.io/robert-rowlands/full/EeWXRq/" class="project-tile" id="tile3" target="_blank"><img
+                    src="../images/esf.jpg" alt="Survey Form" title="Survey Form">
+                <div id="project-title3">
+                    Survey Form
+                </div>
+            </a>
+            <a href="https://codepen.io/robert-rowlands/full/gdmbWj/" class="project-tile" id="tile4" target="_blank"><img
+                    src="../images/tp.jpg" alt="Tribute Page" title="Tribute Page">
+                <div id="project-title4">
+                    Tribute Page
+                </div>
+            </a>
+        </div>
+    </section>
+    <section>
+        <h2 id="contact-me">
+            Contact Me
+        </h2>
+        <div class="grid-container2">
+            <a href="https://github.com/Robert-Rowlands" target="_blank" title="Github" id="profile-link">Github</a>
+            <a href="https://www.freecodecamp.org/fcc179ea973-84a9-4ae8-89ae-ab21ec40504a" target="_blank" title="Free Code Camp"
+                id="profile-link2">FCC</a>
+            <a href="mailto:RJRIV.public@gmail.com" target="_blank" title="E-mail" id="profile-link3">E-mail</a>
+            <a href="https://twitter.com/RJRowlandsIV" target="_blank" title="Twitter" id="profile-link4">Twitter</a>
+        </div>
+    </section>
+    <footer>
+        &copy;Robert Rowlands 2018
+    </footer>
+</body>
+<!-- 
+-User Story #1: My portfolio should have a welcome section with an id of welcome-section.
+-User Story #2: The welcome section should have an h1 element that contains text.
+-User Story #3: My portfolio should have a projects section with an id of projects.
+-User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project.
+User Story #5: The projects section should contain at least one link to a project.
+-User Story #6: My portfolio should have a navbar with an id of navbar.
+-User Story #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page.
+-User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab.
+-User Story #9: My portfolio should have at least one media query.
+-User Story #10: The height of the welcome section should be equal to the height of the viewport.
+-User Story #11: The navbar should always be at the top of the viewport. 
+-->
+<!-- 
+Issues: All Fixed.
+       
+-->
+
+
+
+</html>
