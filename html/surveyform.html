@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<div id="outer">
+  <h1 id="title">
+    Event Survey
+  </h1>
+
+  <p id="description">
+    After completing the event, please answer the following questions so we can continue to improve future events.
+  </p>
+  <div id="inner">
+    <form id="survey-form">
+      <div class="spacing"> <label id="name-label" for="name">* Name: </label>
+        <input type="text" name="name" placeholder="Joe Smith" id="name" required>
+      </div>
+      <div class="spacing"><label id="email-label" for="email">* Email: </label>
+        <input type="email" name="email" id="email" placeholder="joe_smith@gmail.com" required></div>
+      <div class="spacing"> 
+         <label id="number-label" for="hours">* How many hours did you spend at the event? </label>
+        
+        How many hours did you spend at the event? </label><input type="number" id="number"  maxlength="1" min="1" max="9" placeholder="#" required>
+      </div>
+      <div class="spacing">
+        Member status:
+        <select name="member-type" id="dropdown" required>
+  <option value="Full Member">Full Member</option>
+  <option value="Titan Member">Titan Member</option>
+  </select></div>
+      <div class="spacing">
+        Type of event:
+        <input type="radio" name="event-type" value="charity" checked>Charity Event
+        
+        <input type="radio" name="event-type" value="convention">Convention
+        
+        <input type="radio" name="event-type" value="hospital"><label for="hospital">Hospital Visit</label>
+        
+        <input type="radio" name="event-type" value="other">Other
+      </div>
+      <div classs="spacing">
+
+
+
+
+        Event ammenities:
+        <ul style="list-style: none">
+
+       <li><input type="checkbox" id="checkbox1" value="water"><label for="checkbox1" >Water was provided.</label>
+    </li>
+    <li>
+        <input type="checkbox" id="checkbox2" value="room"><label for="checkbox2" >Changing room was available</label></input>
+    </li><li> <input type="checkbox" id="checkbox3" value="parking"><label for="checkbox2" >Parking was free</label>
+    </li><li>
+        <input type="checkbox" id="checkbox4" value="host"><label for="checkbox4" >Event host was courteous and hospitable</label>
+    </li>
+    </ul>
+
+
+    <ul style="list-style: none;">
+          <li class="radio"><label>Definitely<input name="radio-buttons" value="1" type="radio" class="userRatings"></label></li>
+          <li class="radio"><label>Maybe<input name="radio-buttons" value="2" type="radio" class="userRatings"></label></li>
+          <li class="radio"><label>Not sure<input name="radio-buttons" value="3" type="radio" class="userRatings"></label></li>
+        </ul>
+    
+  </div>
+      <div class="spacing">
+        Additional Comments:
+        <br>
+        <textarea name="comments" id="comments" maxlength="3000">
+  </textarea>
+      </div>
+
+      <input type="submit" id="submit">
+    </form>
+  </div>
+</div>
+</body>
+</html>
