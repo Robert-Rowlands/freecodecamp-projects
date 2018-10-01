@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Event Survey Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+   
 </head>
 <body>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 
 <div id="outer">
   <h1 id="title">
@@ -39,20 +38,21 @@
   </select></div>
       <div class="spacing">
         Type of event:
-        <input type="radio" name="event-type" value="charity" checked>Charity Event
+        <input type="radio" name="event-type" value="charity" checked><label for="charity">Charity Event</label>
         
-        <input type="radio" name="event-type" value="convention">Convention
-        
+        <input type="radio" name="event-type" value="convention"><label for="convention">Convention</label>
         <input type="radio" name="event-type" value="hospital"><label for="hospital">Hospital Visit</label>
         
-        <input type="radio" name="event-type" value="other">Other
+        <input type="radio" name="event-type" value="other"><label for="other">
+Other
+        </label>
       </div>
-      <div classs="spacing">
+      <div class="spacing">
 
 
 
 
-        Event ammenities:
+        Event amenities:
         <ul style="list-style: none">
 
        <li><input type="checkbox" id="checkbox1" value="water"><label for="checkbox1" >Water was provided.</label>
